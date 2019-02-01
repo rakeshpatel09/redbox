@@ -1,0 +1,32 @@
+<head>
+        <!-- <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        <link href="{{ asset('js/angular.min.js') }}" rel="stylesheet"> -->
+</head>
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active"> Register </h2>
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="image/admin_pic.svg" id="icon" alt="User Icon" />
+    </div>
+    <!-- Login Form -->
+    <form ng-submit="doRegister()" name="registerForm">
+      <input type="text" class="fadeIn second market-input" ng-model="users.fname" name="fname" placeholder="Full Name" required="">
+      <input type="text" class="fadeIn third market-input" ng-model="users.sponsor_id" name="sponsor_id" placeholder="Sponsor ID" ng-blur="checkSponsor()" ng-style="" required="">
+      <input type="text" class="fadeIn second market-input" ng-model="users.address" name="address" placeholder="address">
+      <input type="text" class="fadeIn third market-input" ng-model="users.adhar_no" name="adhar_no" placeholder="Adhar No">
+      <input type="text" class="fadeIn second market-input" ng-model="users.email_id" name="email_id" placeholder="Email Id" required="">
+      <input type="text" class="fadeIn third market-input" ng-model="users.mobile_no" name="mobile_no" placeholder="Mobile No" required="">
+      <input type="password" class="fadeIn third " ng-model="users.password" name="password" placeholder="Password">
+      <input type="submit" class="fadeIn fourth" value="Register" ng-disabled="registerForm.$invalid">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" ui-sref="login"> Registered Already ? Sign In </a>
+    </div>
+
+  </div>
+</div>

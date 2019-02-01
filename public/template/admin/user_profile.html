@@ -1,0 +1,140 @@
+<div class="">
+            <div class="page-title">
+              
+            </div>
+            <div class="clearfix"></div>
+            
+            <div class="row">
+              <div class="col-md-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>My Profile</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form class="form-horizontal form-label-left input_mask" ng-submit="updateProfile()">
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <label>Sponsor ID</label>
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" value="{{users.users_id}}" ng-model="users.users_id" disabled>
+                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                      </div>
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control has-feedback-left" ng-model="users.user_name" id="inputSuccess2" placeholder="First Name" value="{{users.user_name}}">
+                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                      </div>
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <label>Father Name</label>
+                        <input type="text" class="form-control has-feedback-left" ng-model="users.father_name" id="inputSuccess2" placeholder="Father Name" value="{{users.father_name}}">
+                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                      </div> 
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <label>D.O.B</label>
+                        <input type="text" class="form-control has-feedback-left" ng-model="users.dob" id="inputSuccess2" placeholder="Father Name" value="{{users.dob}}">
+                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                      </div> 
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <label>Gender</label>
+                        <br />
+                        <label class="radio-inline"><input ng-model="male" type="radio" name="gender" ng-checked='users.gender==male'>Male</label>
+                        <label class="radio-inline"><input ng-model="female" type="radio" name="gender" ng-checked='users.gender==female'>Female</label>
+
+                        
+                      </div> 
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <label>Address</label>
+                        <textarea class="form-control has-feedback-left" ng-model="users.address" id="inputSuccess2" placeholder="First Name">{{users.address}}</textarea>                        
+                      </div>  
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <label>City</label>
+                        <input type="text" class="form-control has-feedback-left" ng-model="users.city" id="inputSuccess2" placeholder="Father Name" value="{{users.city}}">
+                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                      </div> 
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <label>District</label>
+                        <input type="text" class="form-control has-feedback-left" ng-model="users.district" id="inputSuccess2" placeholder="Father Name" value="{{users.district}}">
+                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                      </div> 
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <label>State</label>
+                        <input type="text" class="form-control has-feedback-left" ng-model="users.state" id="inputSuccess2" placeholder="Select State" value="{{users.state}}">
+                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                      </div> 
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <label>Country</label>
+                        <input type="text" class="form-control has-feedback-left" ng-model="users.country" id="inputSuccess4" placeholder="Select Country" value="{{users.country}}">
+                        <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                      </div>
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <label>Email ID</label>
+                        <input type="text" class="form-control" ng-model="users.email_id" id="inputSuccess5" placeholder="Enter Email" value="{{users.email_id}}">
+                        <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+                      </div>
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <label>Mobile No</label>
+                        <input type="text" class="form-control" ng-model="users.mobile_no" id="inputSuccess5" placeholder="Enter Mobile No" value="{{users.mobile_no}}">
+                        <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+                      </div>
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <label>Profile Photo</label>
+                        <input type="file" class="form-control" ngf-select ng-model="users.profile_file" name="profile_file" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100">
+                      </div>
+
+                       <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <label>Adhar Photo</label>
+                        <input type="file" class="form-control" ngf-select ng-model="users.adhar_file" name="adhar_file" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100">
+                      </div>
+
+                      
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <label>Pan Photo</label>
+
+                        <input type="file" class="form-control" ngf-select ng-model="users.pan_file" name="pan_file" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100">
+                         <span class="fa fa-users form-control-feedback right" aria-hidden="true"></span>
+                       
+                      </div>
+
+
+                      <div class="form-group">
+                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                          <button type="button" class="btn btn-primary">Back</button>
+						              <button class="btn btn-primary" type="reset">Reset</button>
+                          <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+
+          

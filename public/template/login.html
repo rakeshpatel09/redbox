@@ -1,0 +1,28 @@
+<head>
+        <!-- <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        <link href="{{ asset('js/angular.min.js') }}" rel="stylesheet"> -->
+</head>
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active"> Sign In </h2>
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="image/admin_pic.svg" id="icon" alt="User Icon" />
+    </div>
+    <!-- Login Form -->
+    <form ng-submit="login_check()">
+      <input type="text" class="fadeIn second" ng-model="users.users_id" name="users_id" placeholder="User Id">
+      <input type="password" class="fadeIn third" ng-model="users.password" name="password" placeholder="password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+      <a class="underlineHover" ui-sref="register">Not Registered ? Sign Up </a>
+    </div>
+
+  </div>
+</div>

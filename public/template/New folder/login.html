@@ -1,0 +1,15 @@
+<h2 class="active"> Sign In </h2>
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="image/admin_pic.svg" id="icon" alt="User Icon" />
+    </div>
+    <!-- Login Form -->
+    <form name="login_users" ng-submit="login_check()">
+      <input type="text" id="login" ng-model="users.user_id" class="fadeIn second" name="user_id" placeholder="User id" ng-style="{'border-color' : (login_users.user_id.$valid) ? 'green' : 'red' }" required>
+      <input type="text" id="password" ng-model="users.user_password" class="fadeIn third" name="user_password" placeholder="Password" ng-style="{'border-color' : (login_users.user_password.$valid) ? 'green' : 'red' }" required>
+      <input type="submit" class="fadeIn fourth" value="Log In" ng-disabled="login_users.$invalid" ng-style="{'cursor' : (login_users.$valid) ? 'pointer' : 'not-allowed' }" >
+    </form>
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password ?</a>
+</div>
