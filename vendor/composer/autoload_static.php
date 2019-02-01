@@ -409,6 +409,7 @@ class ComposerStaticInit02fa03984e8519212ec698d4d60d59ef
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'App\\UserSponsor' => __DIR__ . '/../..' . '/app/UserSponsor.php',
+        'App\\payementUserDistribute' => __DIR__ . '/../..' . '/app/payementUserDistribute.php',
         'App\\payment' => __DIR__ . '/../..' . '/app/payment.php',
         'Barryvdh\\DomPDF\\Facade' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/Facade.php',
         'Barryvdh\\DomPDF\\PDF' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/PDF.php',

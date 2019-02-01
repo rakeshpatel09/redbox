@@ -35,6 +35,7 @@ return array(
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\User' => $baseDir . '/app/User.php',
     'App\\UserSponsor' => $baseDir . '/app/UserSponsor.php',
+    'App\\payementUserDistribute' => $baseDir . '/app/payementUserDistribute.php',
     'App\\payment' => $baseDir . '/app/payment.php',
     'Barryvdh\\DomPDF\\Facade' => $vendorDir . '/barryvdh/laravel-dompdf/src/Facade.php',
     'Barryvdh\\DomPDF\\PDF' => $vendorDir . '/barryvdh/laravel-dompdf/src/PDF.php',
